@@ -1,18 +1,20 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <WelcomeMessageVue initialMessage="J'aime bien Vue.js :-)" />
+    <AdminDashboard v-bind:isAdmin="false"></AdminDashboard>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import WelcomeMessageVue from './components/WelcomeMessage.vue'
+import AdminDashboard from './components/AdminDashboard.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    WelcomeMessageVue,
+    AdminDashboard
+}
 }
 </script>
 
